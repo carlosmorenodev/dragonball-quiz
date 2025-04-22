@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 
 import { questions } from '../questions'
 
+/* Imagenes */
+import gokuOk from '../assets/goku-ok.avif'
+import vegetaFail from '../assets/vegeta-fail.avif'
+
 
 
 const getRandomQuestions = () => {
@@ -41,6 +45,10 @@ const QuizGame = () => {
     return (
         <div className='container'>
             <div className="game-wrapper">
+            {/* <h1 className='game-title'>Dragon ball quiz</h1> */}
+
+                <p className='score'>Score: {score}</p>
+
                 {currentQuestion < quizQuestions.length ? (
                     <>
                         <h2>{quizQuestions[currentQuestion].question}</h2>
@@ -66,22 +74,24 @@ const QuizGame = () => {
 
                             ))}
                         </ul>
-                        <p className='score'>Score: {score}</p>
+                        {/* <p className='score'>Score: {score}</p> */}
                     </>
                 ) : (
                     <>
                         <p>¡Juego completado! Puntaje final: {score} / {quizQuestions.length}</p>
-                        <button onClick={restartGame}>Jugar de nuevo</button>
+                        <button className='play-again-button' onClick={restartGame}>Jugar de nuevo</button>
 
                         {score < 5 ? (
                             <>
                                 <p>Podías haberlo hecho mejor</p>
                                 <img src="./vegeta-fail.avif" alt="" />
+                                <img src={vegetaFail} alt="Vegeta fallando" />
                             </>
                         ) : (
                             <>
-                                <p>Enhorabuena!!!</p>
+                                <p className='win'>Enhorabuena!!!</p>
                                 <img src="./goku-ok.avif" alt="" />
+                                <img src={gokuOk} alt="Goku aprobando" />
                             </>
                         )}
                     </>

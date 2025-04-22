@@ -48,7 +48,22 @@
   box-sizing: border-box;
 }
 
-.container {
+@font-face {
+  font-family: 'Saiyan';
+  src: url('./assets/fonts/Saiyan-Sans.ttf');
+}
+
+@font-face {
+  font-family: 'Saiyan-left';
+  src: url('./assets/fonts/Saiyan-Sans\ Left\ Oblique.ttf');
+}
+
+@font-face {
+  font-family: 'Saiyan-right';
+  src: url('./assets/fonts/Saiyan-Sans\ Right\ Oblique.ttf');
+}
+
+/* .container {
   width: 100%;
   height: 100vh;
   background-image: url(../public/background-img.jpg);
@@ -58,28 +73,35 @@
 }
 
 .game-wrapper {
-  max-width: 600px;
+  min-width: 600px;
+  min-height: 350px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   gap: 20px;
   padding: 20px;
   border-radius: 15px;
 
-  /* background: rgba(255, 255, 255, 0.2); */ /* fondo semi-transparente */
-  backdrop-filter: blur(3px); /* aplica el desenfoque */
-  -webkit-backdrop-filter: blur(10px); /* para Safari */
+ 
+  backdrop-filter: blur(3px); 
+  -webkit-backdrop-filter: blur(10px); 
   border-radius: 10px;
   padding: 20px;
+  background-color: #FE8314BF;
   
+  & h2 {
+    text-align: center;
+  }
 }
 
 .correct {
-  background-color: #4caf50; /* verde */
+  background-color: #4caf50; 
   color: white;
 }
  
 .incorrect {
-  background-color: #f44336; /* rojo */
+  background-color: #f44336; 
   color: white;
 }
 
@@ -100,7 +122,199 @@ li {
 }
 
 .score {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  font-family: 'Saiyan', sans-serif;
+  color: white;
+  text-align: center;
+  color: #FFFF00
+}
+
+.play-again-button {
+  background-color: #CE0000;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+} */
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle, #ffe259, #ffa751);
+  font-family: 'SaiyanSans', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.game-title {
+  /* position: absolute;
+  top: 10px; */
+  font-family: 'saiyan', sans-serif;
+  letter-spacing: 2px;
+  color: red;
+  font-size: 4rem;
+}
+
+.game-wrapper {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 4px solid #fe8314;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 0 20px #fe8314aa;
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  & p {
+    padding: 20px;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  color: #1c1c1c;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px #f0c400;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #ffffffcc;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: 2px solid transparent;
+}
+
+li:hover {
+  transform: scale(1.05);
+  background-color: #fdd36b;
+}
+
+.correct {
+  background-color: #4caf50cc;
+  border-color: #388e3c;
   color: white;
 }
+
+.incorrect {
+  background-color: #f44336cc;
+  border-color: #b71c1c;
+  color: white;
+}
+
+.score {
+  font-size: 1.5rem;
+  color: #1c1c1c;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.play-again-button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #fe8314;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.play-again-button:hover {
+  background-color: #e76f00;
+  transform: scale(1.05);
+}
+
+img {
+  max-width: 200px;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 12px;
+}
+
+/* .win {
+  padding-top: 10px;
+} */
+
+
+/* ------------------------------
+   Diseño responsive para móviles
+--------------------------------*/
+
+@media (max-width: 768px) {
+  .game-wrapper {
+    padding: 1.5rem;
+    border-width: 3px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  li {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .score {
+    font-size: 1.2rem;
+  }
+
+  .play-again-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  img {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-wrapper {
+    padding: 1rem;
+    border-width: 2px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  li {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+
+  .score {
+    font-size: 1rem;
+  }
+
+  .play-again-button {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+
+  img {
+    max-width: 120px;
+  }
+}
+
 
