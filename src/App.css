@@ -148,17 +148,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 30px;
   min-height: 100vh;
   padding: 2rem;
 }
 
-.game-title {
-  /* position: absolute;
-  top: 10px; */
-  font-family: 'saiyan', sans-serif;
-  letter-spacing: 2px;
-  color: red;
-  font-size: 4rem;
+.logo {
+  border-radius: 0;
+  max-width: 300px;
 }
 
 .game-wrapper {
@@ -205,16 +203,41 @@ li:hover {
   background-color: #fdd36b;
 }
 
+
+/* Animación aura para acierto */
+@keyframes correctAura {
+  0% {
+    box-shadow: 0 0 0px #4caf50;
+  }
+  50% {
+    box-shadow: 0 0 20px #4caf50;
+  }
+  100% {
+    box-shadow: 0 0 0px #4caf50;
+  }
+}
+
+/* Animación sacudida para fallo */
+@keyframes shakeWrong {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
 .correct {
   background-color: #4caf50cc;
   border-color: #388e3c;
   color: white;
+  animation: correctAura 0.8s ease-in-out;
 }
 
 .incorrect {
   background-color: #f44336cc;
   border-color: #b71c1c;
   color: white;
+  animation: shakeWrong 0.4s ease-in-out;
 }
 
 .score {
@@ -316,5 +339,20 @@ img {
     max-width: 120px;
   }
 }
+
+
+/* Evita que se quede resaltado el <li> en móviles */
+/* li {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+} */
+
+/* Opcional: reset de active/focus para evitar persistencia */
+/* li:focus,
+li:active {
+  background-color: inherit !important;
+  outline: none; 
+}*/
+
 
 

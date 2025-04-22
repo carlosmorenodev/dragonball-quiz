@@ -5,6 +5,7 @@ import { questions } from '../questions'
 /* Imagenes */
 import gokuOk from '../assets/goku-ok.avif'
 import vegetaFail from '../assets/vegeta-fail.avif'
+import dragonBallLogo from '../assets/dragonball-logo.png'
 
 
 
@@ -23,7 +24,7 @@ const QuizGame = () => {
     const [selectedAnswer, setSelectedAnswer] = useState(null);
 
 
-    const handleAnswerClick = (answer) => {
+    /* const handleAnswerClick = (answer) => {
         setSelectedAnswer(answer)
 
         if (answer === quizQuestions[currentQuestion].correctAnswer) {
@@ -34,7 +35,25 @@ const QuizGame = () => {
             setSelectedAnswer(null)
             setCurrentQuestion(currentQuestion + 1);
         }, 1000)
+    }; */
+
+    const handleAnswerClick = (answer, e) => {
+        if (e && e.target) {
+            e.target.blur(); // <- esto elimina el focus visual
+        }
+    
+        setSelectedAnswer(answer);
+    
+        if (answer === quizQuestions[currentQuestion].correctAnswer) {
+            setScore(score + 1);
+        }
+    
+        setTimeout(() => {
+            setSelectedAnswer(null);
+            setCurrentQuestion(currentQuestion + 1);
+        }, 1000);
     };
+    
 
     const restartGame = () => {
         setQuizQuestions(getRandomQuestions());
@@ -44,21 +63,22 @@ const QuizGame = () => {
 
     return (
         <div className='container'>
-            <div className="game-wrapper">
             {/* <h1 className='game-title'>Dragon ball quiz</h1> */}
+            <img className='logo' src={dragonBallLogo} alt="Logo de Dragon Ball" />
+            <div className="game-wrapper">
 
                 <p className='score'>Score: {score}</p>
 
                 {currentQuestion < quizQuestions.length ? (
                     <>
                         <h2>{quizQuestions[currentQuestion].question}</h2>
-                        <ul>
+                        <ul key={currentQuestion}>
                             {quizQuestions[currentQuestion].answers.map((answer, index) => (
 
 
                                 <li
                                     key={index}
-                                    onClick={() => handleAnswerClick(answer)}
+                                    onClick={(e) => handleAnswerClick(answer, e)}
                                     className={
                                         selectedAnswer
                                             ? answer === quizQuestions[currentQuestion].correctAnswer
@@ -74,11 +94,11 @@ const QuizGame = () => {
 
                             ))}
                         </ul>
-                        {/* <p className='score'>Score: {score}</p> */}
+                        
                     </>
                 ) : (
                     <>
-                        <p>¡Juego completado! Puntaje final: {score} / {quizQuestions.length}</p>
+                        <p>¡Juego completado! Puntuación final: {score} / {quizQuestions.length}</p>
                         <button className='play-again-button' onClick={restartGame}>Jugar de nuevo</button>
 
                         {score < 5 ? (
