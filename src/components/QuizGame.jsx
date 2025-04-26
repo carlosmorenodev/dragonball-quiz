@@ -23,37 +23,23 @@ const QuizGame = () => {
 
     const [selectedAnswer, setSelectedAnswer] = useState(null);
 
-
-    /* const handleAnswerClick = (answer) => {
-        setSelectedAnswer(answer)
-
-        if (answer === quizQuestions[currentQuestion].correctAnswer) {
-            setScore(score + 1);
-        }
-
-        setTimeout(() => {
-            setSelectedAnswer(null)
-            setCurrentQuestion(currentQuestion + 1);
-        }, 1000)
-    }; */
-
     const handleAnswerClick = (answer, e) => {
         if (e && e.target) {
             e.target.blur(); // <- esto elimina el focus visual
         }
-    
+
         setSelectedAnswer(answer);
-    
+
         if (answer === quizQuestions[currentQuestion].correctAnswer) {
             setScore(score + 1);
         }
-    
+
         setTimeout(() => {
             setSelectedAnswer(null);
             setCurrentQuestion(currentQuestion + 1);
         }, 1000);
     };
-    
+
 
     const restartGame = () => {
         setQuizQuestions(getRandomQuestions());
@@ -63,7 +49,7 @@ const QuizGame = () => {
 
     return (
         <div className='container'>
-            {/* <h1 className='game-title'>Dragon ball quiz</h1> */}
+
             <img className='logo' src={dragonBallLogo} alt="Logo de Dragon Ball" />
             <div className="game-wrapper">
 
@@ -72,6 +58,18 @@ const QuizGame = () => {
                 {currentQuestion < quizQuestions.length ? (
                     <>
                         <h2>{quizQuestions[currentQuestion].question}</h2>
+
+                        {quizQuestions[currentQuestion].img && (
+                            <>
+                                <p>Ruta de la imagen: {quizQuestions[currentQuestion].img}</p>
+                                <img
+                                    className='question-img'
+                                    src={quizQuestions[currentQuestion].img}
+                                    alt="Imagen de la pregunta"
+                                />
+                            </>
+                        )}
+
                         <ul key={currentQuestion}>
                             {quizQuestions[currentQuestion].answers.map((answer, index) => (
 
@@ -94,7 +92,7 @@ const QuizGame = () => {
 
                             ))}
                         </ul>
-                        
+
                     </>
                 ) : (
                     <>

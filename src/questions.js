@@ -2,16 +2,18 @@ export const questions = [
     {
         question: 'Cuando Goku conoció a Bulma éste le dijo que tenía 14 años, aunque parecía demasiado pequeño para esa edad. ¿Con cuántos años participó en el 21º Torneo de las Artes Marciales?',
         answers: ['19', '21', '12', '15'],
+        img:' /21torneo.jpg',
         correctAnswer: '12'
-    },
-    {
-        question: 'Según establece el propio Toriyama en los compendios y entrevistas, ambos androides compartían nombre con las exóticas gemas azuladas. Eso sí, ambos prefieren que se les llame por su nombre actual',
+    }
+    /* {
+        question: '¿Cuales son los verdaderos nombres de C-17 y C-18?',
         answers: ['Lapis y Lazuli', 'Castor y Pollux', 'Bonnie y Clyde', 'Richard t McKenzie'],
         correctAnswer: 'Lapis y Lazuli'
     },
     {
-        question: 'Bardock, el padre de Goku, ha calado estupendamente entre los fans de Dragon Ball. Pero ¿cómo se llama la madre de Goku?',
+        question: '¿Cómo se llama la madre de Goku?',
         answers: ['Apple', 'Nuts', 'Gine', 'Selypar'],
+        img: './gine.avif',
         correctAnswer: 'Gine'
     },
     {
@@ -373,6 +375,6 @@ export const questions = [
         question: '¿Cómo se llama la técnica de Goku que concentra energía de todos los seres vivos?',
         answers: ['Kaioken', 'Kamehameha', 'Genkidama', 'Zanzoken'],
         correctAnswer: 'Genkidama'
-    }
+    } */
     // Otras preguntas...
 ];
