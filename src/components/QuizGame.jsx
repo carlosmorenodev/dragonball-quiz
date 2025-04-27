@@ -57,18 +57,21 @@ const QuizGame = () => {
 
                 {currentQuestion < quizQuestions.length ? (
                     <>
-                        <h2>{quizQuestions[currentQuestion].question}</h2>
 
                         {quizQuestions[currentQuestion].img && (
-                            <>
-                                <p>Ruta de la imagen: {quizQuestions[currentQuestion].img}</p>
+
+                            <div className="question-img"> 
                                 <img
                                     className='question-img'
                                     src={quizQuestions[currentQuestion].img}
                                     alt="Imagen de la pregunta"
                                 />
-                            </>
+                            </div>
+
                         )}
+
+                        <h2>{quizQuestions[currentQuestion].question}</h2>
+
 
                         <ul key={currentQuestion}>
                             {quizQuestions[currentQuestion].answers.map((answer, index) => (

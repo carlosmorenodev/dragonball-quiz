@@ -57,9 +57,10 @@ body {
 }
 
 .question-img {
-  width: 100px;
-  height: 100px;
-  background-color: red;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
 }
 
 h2 {
