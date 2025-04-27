@@ -2,25 +2,21 @@ export const questions = [
     {
         question: 'Cuando Goku conoció a Bulma éste le dijo que tenía 14 años, aunque parecía demasiado pequeño para esa edad. ¿Con cuántos años participó en el 21º Torneo de las Artes Marciales?',
         answers: ['19', '21', '12', '15'],
-        img:'dragonball-quiz/21torneo.jpg',
         correctAnswer: '12'
     },
     {
         question: '¿Cuales son los verdaderos nombres de C-17 y C-18?',
         answers: ['Lapis y Lazuli', 'Castor y Pollux', 'Bonnie y Clyde', 'Richard t McKenzie'],
-        img:'dragonball-quiz/c17-c18.jpeg',
         correctAnswer: 'Lapis y Lazuli'
     },
     {
         question: '¿Cómo se llama la madre de Goku?',
         answers: ['Apple', 'Nuts', 'Gine', 'Selypar'],
-        img: 'dragonball-quiz/gine.avif',
         correctAnswer: 'Gine'
     },
     {
         question: '¿Cómo se llama el planeta natal de Goku?',
         answers: ['Tierra', 'Namek', 'Vegeta', 'Kanassa'],
-        img:'dragonball-quiz/planet-vegeta.webp',
         correctAnswer: 'Vegeta'
     },
     {
@@ -31,19 +27,16 @@ export const questions = [
     {
         question: '¿Qué técnica usa Goku para derrotar a Majin Buu?',
         answers: ['Kamehameha', 'Genkidama', 'Kaioken', 'Teletransportación'],
-        img:'dragonball-quiz/goku-majin-buu.jpg',
         correctAnswer: 'Genkidama'
     },
     {
         question: '¿Cuál es el nombre verdadero de Vegeta?',
         answers: ['Vegeta IV', 'Príncipe Vegeta', 'Vegeta Jr.', 'Rey Vegeta'],
-        img:'dragonball-quiz/vegeta.webp',
         correctAnswer: 'Príncipe Vegeta'
     },
     {
         question: '¿Qué raza es Piccolo?',
         answers: ['Saiyajin', 'Terrícola', 'Namekiano', 'Kaioshin'],
-        img:'dragonball-quiz/picolo.jpg',
         correctAnswer: 'Namekiano'
     },
     {
@@ -284,7 +277,6 @@ export const questions = [
     {
         question: '¿Qué personaje revive gracias a las esferas de Namek al final de la saga Freezer?',
         answers: ['Goku', 'Krillin', 'Vegeta', 'Piccolo'],
-        img:'dragonball-quiz/characters.jpg',
         correctAnswer: 'Krillin'
     },
     {

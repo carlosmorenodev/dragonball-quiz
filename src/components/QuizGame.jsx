@@ -58,7 +58,8 @@ const QuizGame = () => {
                 {currentQuestion < quizQuestions.length ? (
                     <>
 
-                        {quizQuestions[currentQuestion].img && (
+                        {/* IMAGENES ELIMINADAS POR SI ALGUN DÍA VUELVO A PONERLAS */}
+                        {/* {quizQuestions[currentQuestion].img && (
 
                             <div className="question-img"> 
                                 <img
@@ -68,7 +69,7 @@ const QuizGame = () => {
                                 />
                             </div>
 
-                        )}
+                        )} */}
 
                         <h2>{quizQuestions[currentQuestion].question}</h2>
 
