@@ -25,7 +25,7 @@ const QuizGame = () => {
 
     const handleAnswerClick = (answer, e) => {
         if (e && e.target) {
-            e.target.blur(); // <- esto elimina el focus visual
+            e.target.blur(); 
         }
 
         setSelectedAnswer(answer);
