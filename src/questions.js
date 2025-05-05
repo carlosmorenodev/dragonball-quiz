@@ -1,6 +1,6 @@
 export const questions = [
     {
-        question: 'Cuando Goku conoció a Bulma éste le dijo que tenía 14 años, aunque parecía demasiado pequeño para esa edad. ¿Con cuántos años participó en el 21º Torneo de las Artes Marciales?',
+        question: '¿Con cuántos años participó Goku en el 21º Torneo de las Artes Marciales?',
         answers: ['19', '21', '12', '15'],
         correctAnswer: '12'
     },
@@ -35,12 +35,12 @@ export const questions = [
         correctAnswer: 'Príncipe Vegeta'
     },
     {
-        question: '¿Qué raza es Piccolo?',
+        question: '¿De qué raza es Piccolo?',
         answers: ['Saiyajin', 'Terrícola', 'Namekiano', 'Kaioshin'],
         correctAnswer: 'Namekiano'
     },
     {
-        question: '¿Cuántas esferas del dragón existen?',
+        question: '¿Cuántas bolas de dragón existen?',
         answers: ['5', '6', '7', '9'],
         correctAnswer: '7'
     },
@@ -121,7 +121,7 @@ export const questions = [
     },
     {
         question: '¿Quién gana el Torneo del Poder?',
-        answers: ['Goku', 'Jiren', 'Android 17', 'Vegeta'],
+        answers: ['Goku', 'Jiren', 'Androide 17', 'Vegeta'],
         correctAnswer: 'Android 17'
     },
     {
@@ -131,7 +131,7 @@ export const questions = [
     },
     {
         question: '¿Cuál es el nombre de la hija de Gohan?',
-        answers: ['Pan', 'Bra', 'Videl', 'Milk'],
+        answers: ['Pan', 'Bra', 'Videl', 'Chi-chi'],
         correctAnswer: 'Pan'
     },
     {
@@ -165,7 +165,7 @@ export const questions = [
         correctAnswer: 'Gohan'
     },
     {
-        question: '¿Qué objeto permite a los personajes fusionarse durante 30 minutos?',
+        question: '¿Qué técnica permite a los personajes fusionarse durante 30 minutos?',
         answers: ['Pendientes Pothala', 'Aros mágicos', 'Danza Metamoru', 'Reloj del tiempo'],
         correctAnswer: 'Danza Metamoru'
     },
@@ -185,7 +185,7 @@ export const questions = [
         correctAnswer: 'Bardock'
     },
     {
-        question: '¿Qué planeta es destruido por Freezer al inicio de Dragon Ball Z?',
+        question: '¿Qué planeta es destruido por Freezer al inicio de Dragon Ball Z Kai?',
         answers: ['Tierra', 'Namek', 'Vegeta', 'Yadrat'],
         correctAnswer: 'Vegeta'
     },
@@ -231,18 +231,13 @@ export const questions = [
     },
     {
         question: '¿Cómo se llama la hija de Vegeta y Bulma?',
-        answers: ['Pan', 'Bra', 'Videl', 'Milk'],
+        answers: ['Pan', 'Bra', 'Videl', 'Chi chi'],
         correctAnswer: 'Bra'
     },
     {
         question: '¿Quién es el rey del planeta Namek?',
         answers: ['Kami-sama', 'Dende', 'Gran Patriarca', 'Guru'],
         correctAnswer: 'Guru'
-    },
-    {
-        question: '¿Qué personaje revienta al insecto Cell desde dentro?',
-        answers: ['Goku', 'Gohan', 'Vegeta', 'Mr. Satán'],
-        correctAnswer: 'Goku'
     },
     {
         question: '¿Cómo se llama el torneo donde compiten 8 universos?',
@@ -266,8 +261,8 @@ export const questions = [
     },
     {
         question: '¿Quién es la esposa de Goku?',
-        answers: ['Bulma', 'Milk', 'Videl', 'Pan'],
-        correctAnswer: 'Milk'
+        answers: ['Bulma', 'Chi-chi', 'Videl', 'Pan'],
+        correctAnswer: 'Chi-chi'
     },
     {
         question: '¿Qué nombre tiene el ataque de energía en forma de disco que usa Krilin?',
@@ -373,6 +368,6 @@ export const questions = [
         question: '¿Cómo se llama la técnica de Goku que concentra energía de todos los seres vivos?',
         answers: ['Kaioken', 'Kamehameha', 'Genkidama', 'Zanzoken'],
         correctAnswer: 'Genkidama'
-    } 
-    // Otras preguntas...
+    }
+    
 ];
